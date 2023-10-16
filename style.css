@@ -1,6 +1,6 @@
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
+  font-family: "Signika Negative", sans-serif;
+  background: linear-gradient(to left, #e6cb34, #c66eec);
   margin: 0;
   padding: 0;
   display: flex;
@@ -14,11 +14,21 @@ body {
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   padding: 20px;
-  max-width: 320px;
+  max-width: 240px;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.wind-and-description {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+img {
+  height: 37px;
 }
 
 h1 {
@@ -31,42 +41,46 @@ h1 {
   font-weight: bold;
 }
 
-.location-heading {
-  font-weight: bold;
-  font-size: 18px;
+.location {
+  font-weight: lighter;
+  font-size: 15px;
   margin-top: 10px;
+  color: rgba(0, 0, 0, 0.5);
 }
 
 .coordinates {
-  font-size: 16px;
-  white-space: nowrap;
-  color: white;
-}
-
-.weather-info {
+  font-size: 12px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  margin-top: 20px;
+  flex-direction: row;
+  color: rgba(0, 0, 0, 0.5);
 }
 
-.temperature {
+.temp {
   font-size: x-large;
   font-weight: 900;
-}
-
-.weather-icon {
-  width: 30px;
-  height: 30px;
-}
-
-.weather-description {
-  flex-grow: 1;
-  text-align: left;
-  font-size: 14px;
+  display: flex;
+  flex-direction: row;
 }
 
 p {
-  margin: 5px 0;
+  margin: 5px;
+}
+
+.wind {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+}
+
+.windImg {
+  height: 27px;
+}
+
+div.wind,
+div.description {
+  width: 40%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: left;
 }

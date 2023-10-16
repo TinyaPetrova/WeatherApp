@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Signika+Negative&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
     <title>Weather Forecast</title>
@@ -11,19 +14,25 @@
 
 <body>
     <div class="weather-card">
-        <h1 class="city" id="city">Loading...</h1>
-        <p class="location-heading">Coordinates:</p>
-        <p class="coordinates1" id="latitude">Loading...</p>
-        <p class="coordinates2" id="longitude">Loading...</p>
-        <div class="weatherInfo">
-            <img src="https://static.thenounproject.com/png/1815121-200.png" alt="weather pic" class="weatherIcon"
-                id="weatherIcon">
-            <div class="weatherDescription">
-                <p class="temperature" id="temperature">Loading...</p><br><br>
+        <p class="location">You're here now:</p>
+        <p class="city" id="city">Loading...</p>
+        <div class="coordinates">
+            <p id="latitude">Loading...</p>
+            <p id="longitude">Loading...</p>
+        </div><br>
+        <div class="temp">
+            <img src="" alt="weather pic" class="weatherIcon" id="weatherIcon">
+            <p class="temperature" id="temperature">Loading...</p>
+        </div><br>
+        <div class="wind-and-description">
+            <div class="wind">
+                <img src="wind.png" alt="wind" class="windImg">
                 <p class="windSpeed" id="windSpeed">Loading...</p>
             </div>
+            <div class="description">
+                <p id="description">Loading...</p>
+            </div>
         </div>
-        <p class="description" id="description">Loading...</p>
     </div>
 </body>
 

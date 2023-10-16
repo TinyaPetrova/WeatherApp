@@ -34,15 +34,14 @@ async function getWeather() {
   const windSpeed = weatherData.current_weather.windspeed;
 
   document.getElementById("temperature").textContent = temperature + `°C`;
-  document.getElementById("windSpeed").textContent =
-    `Wind speed: ` + windSpeed + ` m/s`;
+  document.getElementById("windSpeed").textContent = windSpeed + ` m/s`;
   document.getElementById("description").textContent = description;
 
   console.log("Temperature (°C):", temperature);
   console.log("Wind speed (m/s):", windSpeed);
   console.log("Weather description:", description);
 
-  return description;
+  setWeatherIcon(weatherCode);
 }
 
 function getWeatherDescription(weatherCode) {
@@ -106,6 +105,42 @@ function getWeatherDescription(weatherCode) {
       break;
   }
   return description;
+}
+
+function setWeatherIcon(weatherCode) {
+  let iconPath = "";
+  switch (weatherCode) {
+    case 0:
+      iconPath = "sun.png";
+      break;
+    case 1:
+    case 2:
+    case 3:
+      iconPath = "sun_with_cloud.png";
+      break;
+    case 45:
+    case 48:
+      iconPath = "fog.png";
+      break;
+    case 51:
+    case 53:
+    case 55:
+      iconPath = "rain.png";
+      break;
+    case 71:
+    case 73:
+    case 75:
+      iconPath = "snow.png";
+      break;
+    case 95:
+    case 96:
+    case 99:
+      iconPath = "thunderstorm.png";
+      break;
+    default:
+      iconPath = "default.png";
+  }
+  document.getElementById("weatherIcon").src = iconPath;
 }
 
 getWeather().catch((error) => {
