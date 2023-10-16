@@ -112,34 +112,34 @@ function setWeatherIcon(weatherCode) {
   let iconPath = "";
   switch (weatherCode) {
     case 0:
-      iconPath = path + "sun.png";
+      iconPath = "sun.png";
       break;
     case 1:
     case 2:
     case 3:
-      iconPath = path + "sun_with_cloud.png";
+      iconPath = "sun_with_cloud.png";
       break;
     case 45:
     case 48:
-      iconPath = path + "fog.png";
+      iconPath = "fog.png";
       break;
     case 51:
     case 53:
     case 55:
-      iconPath = path + "rain.png";
+      iconPath = "rain.png";
       break;
     case 71:
     case 73:
     case 75:
-      iconPath = path + "snow.png";
+      iconPath = "snow.png";
       break;
     case 95:
     case 96:
     case 99:
-      iconPath = path + "thunderstorm.png";
+      iconPath = "thunderstorm.png";
       break;
     default:
-      iconPath = path + "default.png";
+      iconPath = "default.png";
   }
   document.getElementById("weatherIcon").src = path + iconPath;
 }
