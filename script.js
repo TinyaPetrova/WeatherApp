@@ -41,7 +41,7 @@ async function getWeather() {
   console.log("Wind speed (m/s):", windSpeed);
   console.log("Weather description:", description);
 
-  setWeatherIcon(weatherCode);
+  setWeatherIcon(weatherCode, path);
 }
 
 function getWeatherDescription(weatherCode) {
@@ -107,8 +107,9 @@ function getWeatherDescription(weatherCode) {
   return description;
 }
 
-function setWeatherIcon(weatherCode) {
-  const path = "./content/";
+const path = "./content/";
+
+function setWeatherIcon(weatherCode, path) {
   let iconPath = "";
   switch (weatherCode) {
     case 0:
