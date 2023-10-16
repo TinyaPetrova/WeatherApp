@@ -41,7 +41,7 @@ async function getWeather() {
   console.log("Wind speed (m/s):", windSpeed);
   console.log("Weather description:", description);
 
-  setWeatherIcon(weatherCode, path);
+  setWeatherIcon(weatherCode);
 }
 
 function getWeatherDescription(weatherCode) {
@@ -107,9 +107,7 @@ function getWeatherDescription(weatherCode) {
   return description;
 }
 
-const path = "./content/";
-
-function setWeatherIcon(weatherCode, path) {
+function setWeatherIcon(weatherCode) {
   let iconPath = "";
   switch (weatherCode) {
     case 0:
@@ -142,7 +140,7 @@ function setWeatherIcon(weatherCode, path) {
     default:
       iconPath = "default.png";
   }
-  document.getElementById("weatherIcon").src = path + iconPath;
+  document.getElementById("weatherIcon").src = iconPath;
 }
 
 getWeather().catch((error) => {
