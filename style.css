@@ -1,0 +1,70 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.weather-card {
+  background: linear-gradient(
+    to bottom,
+    #e6cb34,
+    #c66eec
+  ); /* Градиентный фон */
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  max-width: 320px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-size: 24px;
+  margin: 0 0 10px;
+}
+
+.city {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.location-heading {
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 10px; /* Добавил отступ между "Coordinates:" и координатами */
+}
+
+.coordinates {
+  font-size: 16px;
+  margin-bottom: 20px; /* Добавил отступ вниз между координатами и следующей информацией */
+}
+
+.weather-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; /* Занимать всю доступную ширину */
+  margin-top: 20px; /* Добавил отступ сверху */
+}
+
+.weather-icon {
+  width: 30px; /* Уменьшил размер иконки погоды */
+  height: 30px;
+}
+
+.weather-description {
+  flex-grow: 1;
+  text-align: left;
+  font-size: 14px; /* Уменьшил размер шрифта для описания погоды */
+}
+
+p {
+  margin: 5px 0;
+}
