@@ -12,24 +12,25 @@
 </head>
 
 <body>
-    <div class="weather-card">
-        <p class="location">You're here now:</p>
-        <p class="city" id="city">Loading...</p>
+    <div class="weather-card" id="weatherCard">
+        <p class="location" id="locationText">You're here now:</p>
+        <p class="city" id="city"></p>
         <div class="coordinates">
-            <p id="latitude">Loading...</p>
-            <p id="longitude">Loading...</p>
+            <p id="latitude"></p>
+            <p id="longitude"></p>
         </div><br>
+        <div id="loader" class="loader" style="display: none"></div>
         <div class="temp">
             <img src="./content/default.png" alt="weather pic" class="weatherIcon" id="weatherIcon">
-            <p class="temperature" id="temperature">Loading...</p>
+            <p class="temperature" id="temperature"></p>
         </div><br>
         <div class="wind-and-description">
-            <div class="wind">
+            <div class="wind" id="windElement" style="display: none">
                 <img src="./content/wind.png" alt="wind" class="windImg">
-                <p class="windSpeed" id="windSpeed">Loading...</p>
+                <p class="windSpeed" id="windSpeed"></p>
             </div>
             <div class="description">
-                <p id="description">Loading...</p>
+                <p id="description"></p>
             </div>
         </div>
     </div>

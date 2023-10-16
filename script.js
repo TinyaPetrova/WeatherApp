@@ -1,4 +1,9 @@
+const loader = document.getElementById("loader");
+const weatherCard = document.getElementById("weatherCard");
+const windElement = document.getElementById("windElement");
+
 async function getWeather() {
+  loader.style.display = "block";
   const geoResponse = await fetch(`https://get.geojs.io/v1/ip/geo.json`);
   if (!geoResponse.ok) {
     const geoError = `Error while getting geolocation data!`;
@@ -42,6 +47,10 @@ async function getWeather() {
   console.log("Weather description:", description);
 
   setWeatherIcon(weatherCode);
+
+  loader.style.display = "none";
+  weatherCard.style.display = "block";
+  windElement.style.display = "block";
 }
 
 function getWeatherDescription(weatherCode) {
@@ -144,5 +153,6 @@ function setWeatherIcon(weatherCode) {
 }
 
 getWeather().catch((error) => {
+  loader.style.display = "none";
   console.log("Something went wrong: ", error);
 });
