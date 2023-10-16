@@ -10,11 +10,7 @@ body {
 }
 
 .weather-card {
-  background: linear-gradient(
-    to bottom,
-    #e6cb34,
-    #c66eec
-  ); /* Градиентный фон */
+  background: linear-gradient(to bottom, #e6cb34, #c66eec);
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   padding: 20px;
@@ -38,31 +34,32 @@ h1 {
 .location-heading {
   font-weight: bold;
   font-size: 18px;
-  margin-top: 10px; /* Добавил отступ между "Coordinates:" и координатами */
+  margin-top: 10px;
 }
 
 .coordinates {
   font-size: 16px;
-  margin-bottom: 20px; /* Добавил отступ вниз между координатами и следующей информацией */
+  white-space: nowrap;
+  color: white;
 }
 
 .weather-info {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%; /* Занимать всю доступную ширину */
-  margin-top: 20px; /* Добавил отступ сверху */
+  width: 100%;
+  margin-top: 20px;
 }
 
 .weather-icon {
-  width: 30px; /* Уменьшил размер иконки погоды */
+  width: 30px;
   height: 30px;
 }
 
 .weather-description {
   flex-grow: 1;
   text-align: left;
-  font-size: 14px; /* Уменьшил размер шрифта для описания погоды */
+  font-size: 14px;
 }
 
 p {

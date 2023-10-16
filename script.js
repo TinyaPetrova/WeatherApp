@@ -16,8 +16,8 @@ async function getWeather() {
   console.log("Current city is: ", city);
 
   document.getElementById("city").textContent = city;
-  document.getElementById("latitude").textContent = latitude;
-  document.getElementById("longitude").textContent = longitude;
+  document.getElementById("latitude").textContent = latitude + `N`;
+  document.getElementById("longitude").textContent = longitude + `E`;
 
   const weatherResponse = await fetch(
     `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true`
