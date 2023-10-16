@@ -48,9 +48,9 @@ async function getWeather() {
 
   setWeatherIcon(weatherCode);
 
-  loader.style.display = "none";
   weatherCard.style.display = "block";
   windElement.style.display = "block";
+  loader.style.display = "none";
 }
 
 function getWeatherDescription(weatherCode) {

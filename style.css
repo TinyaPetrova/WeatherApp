@@ -37,7 +37,7 @@ body {
 .wind-and-description {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 img {
@@ -91,11 +91,17 @@ p {
   height: 27px;
 }
 
-div.wind,
 div.description {
   width: 40%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   text-align: left;
+}
+
+div.wind {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
 }
